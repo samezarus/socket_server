@@ -17,7 +17,7 @@ server.bind((SERVER_HOST, SERVER_PORT))
 server.listen()
 
 
-def wait_client(server_socket):
+def listen_client(server_socket):
     while True:
         # Слушаем порт
         #print(f'Server "{SERVER_HOST}" listen port "{SERVER_PORT}"')
@@ -43,4 +43,4 @@ def send_to_client(client, address):
     client.close()
 
 if __name__ == '__main__' :
-    wait_client(server)
+    listen_client(server)
